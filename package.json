@@ -1,0 +1,32 @@
+{
+  "name": "vi-cli",
+  "version": "0.1.1",
+  "description": "viola cli\u001b[D\u001b[D\u001b[D\u001b[D\u001b[-\u001b[C\u001b[C\u001b[C\u001b[D\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b\u001b[C\u001b[C\u001b a cli for viola",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "viola": "bin/viola"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RonkTsang/vi-cli.git"
+  },
+  "keywords": [
+    "cli"
+  ],
+  "author": "ronk zeng",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RonkTsang/vi-cli/issues"
+  },
+  "homepage": "https://github.com/RonkTsang/vi-cli#readme",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "co-prompt": "^1.0.0",
+    "commander": "^2.16.0",
+    "download-git-repo": "^1.0.2",
+    "inquirer": "^6.0.0"
+  }
+}
