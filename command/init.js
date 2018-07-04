@@ -15,7 +15,7 @@ module.exports = async () => {
   let branch
   
   tplURL = tpls[config.tpl]
-
+  console.log(chalk.white('\n pulling from ' + tplURL))
   console.log(chalk.white('\n Start generating...'))
 
   var isError = await downloadTpl(tplURL)

@@ -1,5 +1,5 @@
 {
   "test": "github:RonkTsang/test-template#dev",
   "webpack": "github:RonkTsang/test-template",
-  "Tom": "direct:https://github.com/RonkTsang/test-template/tree/dev"
+  "Tom": "direct:https://github.com/RonkTsang/test-template.git"
 }
