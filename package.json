@@ -1,7 +1,7 @@
 {
-  "name": "vi-cli",
-  "version": "0.1.2",
-  "description": "viola cli\u001b[D\u001b[D\u001b[D\u001b[D\u001b[-\u001b[C\u001b[C\u001b[C\u001b[D\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b\u001b[C\u001b[C\u001b a cli for viola",
+  "name": "viola-cli",
+  "version": "0.1.4",
+  "description": "viola cli a cli for viola",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

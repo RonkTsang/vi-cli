@@ -6,15 +6,16 @@ const qustions = require('../prompt').prompt
 const tpls = require('../template')
 const chalk = require('chalk')
 const download = require('download-git-repo')
+const path = require('path')
 
 module.exports = async () => {
   let config = await inquirer.prompt(qustions)
   // let projectName = await prompt('Project name: ')
   let tplURL
   let branch
-
+  
   tplURL = tpls[config.tpl]
-
+  console.log(chalk.white('\n pulling from ' + tplURL))
   console.log(chalk.white('\n Start generating...'))
 
   var isError = await downloadTpl(tplURL)
@@ -25,27 +26,19 @@ module.exports = async () => {
   } else {
     console.log(chalk.green('\n √ Generation completed!'))
     console.log(chalk.green(`\n ${config.projectName} for ${config.author}`))
-    console.log(`\n run npm install \n`)
+    console.log(`\n run tnpm install \n`)
   }
-  
-  // exec(cmdStr, (error, stdout, stderr) => {
-  //   if (error) {
-  //     console.log(error)
-  //     process.exit()
-  //   }
-  //   console.log(chalk.green('\n √ Generation completed!'))
-  //   console.log(`\n cd ${projectName} && npm install \n`)
-  //   process.exit()
-  // })
+
 }
 
 function downloadTpl(tplURL) {
+  let target = path.resolve(process.cwd(), '.')
   return new Promise((resolve, reject) => {
-    download(tplURL, './', (err) => {
+    download(tplURL, target, (err) => {
       if (err) {
         reject(err)
       } else {
-        resolve(null)
+        resolve()
       }
     })
   })
